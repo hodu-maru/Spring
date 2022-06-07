@@ -1,1 +1,70 @@
-<mxfile host="app.diagrams.net" modified="2022-06-07T03:52:56.284Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.151 Whale/3.14.134.62 Safari/537.36" version="19.0.1" etag="lRgJlxgQZsZ_cqFAgiPr" type="github"><diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">7VhZc9MwEP41Hp5gfBQnecRp0wKhU2ihw6NiK7aI7DWynINfzyqWYzsOOYD0yDQv0a43K2m/b4/YcPrx/FKQNPoEAeWGbQZzwzk3bNuybQe/lGZRaLq9bqEIBQu0UaW4Zb+oVppam7OAZg1DCcAlS5tKH5KE+rKhI0LArGk2Bt7cNSUhbSlufcLb2nsWyEjfwu5U+ivKwqjc2XJ7xZOYlMb6JllEApjVVM6F4fQFgCxW8bxPuQpeGZf794t7Ppy4lx8+Zz/JV+/j3fW314WzwSE/WV1B0ET+X9d24XpKeK7jpe8qF2UABeRJQJUT03C8SMYclxYuf1ApFxpwkktAFQgZQQgJ4UOAVNuNIZHazFIyTYJ3CliURxz8SaEaMM71Hihp+y5KmRQwWWGnHKyAUMacjCj3iD8JlwftAweBjxJIqHIVIBn0XarDXVRab8/YagwyyIVPt9jpbJFEhHSbP7ewU+er8VQjd0khplIs0EBQTiSbNslMdE6EK7sKd1xo6A+ggdOiwZDEqcp6oFnySuJqBmKyhRsKl1nEJL1NyTJAMywnTb7UeYBX9UJOskyjuAPkw0CaUiHpfGtYy6euzu2yuGlxVlUKq0z/qFYlzswjAXHWAuI7Fs+XlPyXlHT3TMmyY+3MSU2Wkhh7p6j2dAMskTUTGI8zPNg6dVYb/j2b3rbYdA0tMu3G41nT7ZHI1DmMS9aT55L7hxbhcgyDNxK4CtUq5XkYIlnQXWI4g3btiiAe5dnudtHAWDFoQGLGVbyuKJ9SyXyyoakQzkLc99xHuKnYTB7ckiUhSm4l3S3JivX3iM2m02w2K7nebcwN3aZ7rG7TaWF6g+gV0NkmX+J7Yh3fsddA6D12y+/uU6SfdQl+8I5fVtPdLd/as0xr9phvHPw0CPT0p4DeXjPlyxhwHIbZpzYIlCes8cnL+ag9CYxykSwHAcjlyySwbRKwNzWhB50EykJYA/ULTQlDMM3hKc4B6//8z5zHngPKStGEgKuY2maRYSeGwfos5ljHwwDF6k1tUQqr993OxW8=</diagram></mxfile>
+<mxfile host="app.diagrams.net" modified="2022-06-07T04:24:38.044Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.151 Whale/3.14.134.62 Safari/537.36" etag="M2cjwmOZVmmxt_2oU2Lf" version="19.0.1" type="github">
+  <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
+    <mxGraphModel dx="736" dy="437" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="WIyWlLk6GJQsqaUBKTNV-0" />
+        <mxCell id="WIyWlLk6GJQsqaUBKTNV-1" parent="WIyWlLk6GJQsqaUBKTNV-0" />
+        <mxCell id="22Y69lhMLeswvPPlSt1S-0" value="src node : 1 , dest node : 2&lt;br&gt;src에서 dest로 &quot;hello&quot; 전송&lt;br&gt;받는 쪽에서 패킷 2번 받지 못해 retransmission 2회 발생 후&amp;nbsp;&lt;br&gt;3번째에 ack수신 후 성공" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="40" y="40" width="450" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="22Y69lhMLeswvPPlSt1S-1" value="1.메세지 입력&lt;br&gt;arqMain_processInputWord()" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="40" y="160" width="190" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="22Y69lhMLeswvPPlSt1S-5" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="22Y69lhMLeswvPPlSt1S-1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="250" y="350" as="sourcePoint" />
+            <mxPoint x="135" y="280" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="22Y69lhMLeswvPPlSt1S-9" value="2.setEventFlag=&lt;br&gt;setEvent_dataToSend" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="170" y="240" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="22Y69lhMLeswvPPlSt1S-31" value="Dest" style="swimlane;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="467" y="290" width="360" height="820" as="geometry" />
+        </mxCell>
+        <mxCell id="22Y69lhMLeswvPPlSt1S-41" value="Src" style="swimlane;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="10" y="290" width="360" height="820" as="geometry" />
+        </mxCell>
+        <mxCell id="22Y69lhMLeswvPPlSt1S-42" value="3.Idle 상태에서&amp;nbsp;&lt;br&gt;else if(aqrEvent_checkEventFlag(&lt;br&gt;arqEvent_dataToSend) 실행" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="22Y69lhMLeswvPPlSt1S-41">
+          <mxGeometry x="10" y="70" width="260" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="22Y69lhMLeswvPPlSt1S-43" value="&lt;span style=&quot;&quot;&gt;4.arqMsg_encodeData()&lt;/span&gt;&lt;br style=&quot;&quot;&gt;&lt;span style=&quot;&quot;&gt;arqType, seqNum, originWord를 담은 PDU 생성&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="22Y69lhMLeswvPPlSt1S-41">
+          <mxGeometry x="10" y="180" width="260" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="22Y69lhMLeswvPPlSt1S-57" value="6.이후 seqNum 1증가후 retxCnt를 0으로 초기화&lt;br&gt;&lt;br&gt;7.mainstate를 TX로 변경 후 eventFlag를 clear" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="22Y69lhMLeswvPPlSt1S-41">
+          <mxGeometry x="10" y="390" width="260" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="22Y69lhMLeswvPPlSt1S-58" value="" style="endArrow=classic;html=1;rounded=0;fontSize=36;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="22Y69lhMLeswvPPlSt1S-41" source="22Y69lhMLeswvPPlSt1S-42" target="22Y69lhMLeswvPPlSt1S-43">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="280" y="360" as="sourcePoint" />
+            <mxPoint x="330" y="310" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="22Y69lhMLeswvPPlSt1S-59" value="" style="endArrow=classic;html=1;rounded=0;fontSize=36;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="22Y69lhMLeswvPPlSt1S-41" source="22Y69lhMLeswvPPlSt1S-43" target="22Y69lhMLeswvPPlSt1S-57">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="150" y="140" as="sourcePoint" />
+            <mxPoint x="150" y="190" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="22Y69lhMLeswvPPlSt1S-44" value="" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;startArrow=none;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="22Y69lhMLeswvPPlSt1S-51">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="160" y="540" as="sourcePoint" />
+            <mxPoint x="620" y="640" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="22Y69lhMLeswvPPlSt1S-45" value="5.arqLLI_sendData로&amp;nbsp;&lt;br&gt;dest에게 전송 -&amp;gt; 실패" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="290" y="610" width="190" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="22Y69lhMLeswvPPlSt1S-51" value="X" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="390" y="585" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="22Y69lhMLeswvPPlSt1S-54" value="" style="shape=flexArrow;endArrow=none;html=1;rounded=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" target="22Y69lhMLeswvPPlSt1S-51">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="160" y="540" as="sourcePoint" />
+            <mxPoint x="620" y="640" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
